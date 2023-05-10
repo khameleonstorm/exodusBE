@@ -36,8 +36,6 @@ async function updateTransactionsStatus() {
     // convert seconds to days
     const diffDays = diffSeconds / (60 * 60 * 24);
 
-    console.log('diffDay', diffDays)
-
     if (diffDays >= day) {
       // update transactions status to completed
       doc.ref.update({ status: 'completed' });
